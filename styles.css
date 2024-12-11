@@ -1,1 +1,26 @@
 /*  your css code here. If applicable */
+
+#container {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #000;
+    position: relative; /* Ensure positioning for the pseudo-elements */
+}
+
+/* Pseudo-element inserted before the container content */
+#container::before {
+    content: "Before Content";  /* Text inserted before the content */
+    color: #f00;                /* Red color */
+    font-size: 20px;            /* Font size of 20px */
+    display: block;             /* Makes the content block-level */
+    margin-bottom: 10px;        /* Adds space between the inserted text and the container content */
+}
+
+/* Pseudo-element inserted after the container content */
+#container::after {
+    content: "After Content";   /* Text inserted after the content */
+    color: #f00;                /* Red color */
+    font-size: 20px;            /* Font size of 20px */
+    display: block;             /* Makes the content block-level */
+    margin-top: 10px;           /* Adds space between the container content and the inserted text */
+}
